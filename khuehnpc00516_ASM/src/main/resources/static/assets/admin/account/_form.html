@@ -1,0 +1,62 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-4 text-center">
+                    <label for="image">
+                        <img ng-src="{{'/assets/images/'+form.photo}}" style="max-width: 100%;" alt="">
+                    </label>
+                </div>
+                <div class="col-sm-8">
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <div>USER NAME</div>
+                            <input ng-model="form.username" type="text" class="form-control">
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <div>PASSWORD:</div>
+                            <input ng-model="form.password" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <div>Image</div>
+                            <input ng-model="form.photo"  type="file" id="photo" class="form-control"
+                            onchange="angular.element(this).scope().imageChange(this.files)">
+                        </div>
+                       
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <div>FULL NAME</div>
+                            <input ng-model="form.fullname" type="text" class="form-control">
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <div>Email</div>
+                            <input ng-model="form.email" type="text" class="form-control">
+                        </div>
+                  
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="panel-footer text-center">
+            <button ng-click ="create()" class="btn btn-primary">
+               <b class="glyphicon glyphicon-plus"></b>Create
+            </button>
+            <button ng-click ="update()" class="btn btn-success">
+                <b  class="glyphicon glyphicon-save"></b>Update
+             </button>
+             <button ng-click ="delete(form)"  class="btn btn-danger">
+                <b  class="glyphicon glyphicon-trash"></b>Delete
+             </button>
+             <button ng-click ="reset()" class="btn btn-info">
+                <b  class="glyphicon glyphicon-refresh"></b>Reset
+             </button>
+           
+        </div>
+
+    </div>
+</div>
