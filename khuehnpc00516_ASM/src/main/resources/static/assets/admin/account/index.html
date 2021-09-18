@@ -1,0 +1,24 @@
+<ul class="nav nav-tabs" style="font-variant: small-caps;">
+    <li >
+      <a data-target="#edit" data-toggle="tab" href="">ACCOUNT EDITION</a>
+    </li>
+    <li class="active" >
+      <a data-target="#list" data-toggle="tab" href="">LIST ACCOUNT</a>
+    </li>
+     <li >
+      <a data-target="#role" data-toggle="tab" href="">Role</a>
+    </li>
+</ul> 
+    <div class="tab-content">
+
+        <div  id="edit" class="tab-pane fade">
+            <div ng-include = "'/assets/admin/account/_form.html'"> </div>
+        </div>
+        <div  id="list" class="tab-pane fade in active">
+            <div ng-include = "'/assets/admin/account/_table.html'"> </div>
+        </div>
+        <div  id="role" class="tab-pane fade">
+            <div ng-include = "'/assets/admin/account/_role.html'"> </div>
+        </div>
+    </div>
+  
